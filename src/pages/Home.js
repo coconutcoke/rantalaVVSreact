@@ -136,7 +136,7 @@ class Home extends React.Component {
           <p id="center">
             Vill du prenumerera på vårt nyhetsbrev? Ange din mejladress nedan! </p> <br></br>
 
-            <p id="center"> <Form /> </p>
+          <Form />
           <div className="container">
             <div className="flexContentCentered">
               <form action="/action_page.php">
