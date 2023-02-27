@@ -1,0 +1,935 @@
+@charset "UTF-8";
+
+/* --- TEXT --- */
+
+:root {
+  --blue: #393185;
+  --lightblue: #cbd9ff;
+  --white: #ffffff;
+  --textcolor: black;
+  --h1color: #393185;
+  --h2color: #393185;
+  --h3color: #393185;
+  --hovercolor: orange;
+  --brödtext: "Lato", sans-serif;
+  --rubriktext: 'Raleway', sans-serif;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+.header {
+  margin: auto;
+	max-width: 1200px;
+  display: block;
+  overflow: auto;
+}
+
+#center {
+  text-align: center;
+}
+
+/* --- TEXT --- */
+
+/* Brödtext och rubriker */
+* {
+	font-size: 20px;
+  font-family: var(--brödtext);
+	font-weight: 400;
+	color: var(--textcolor);
+  line-height: 1.5;
+}
+
+.textcolor {
+  color: var(--textcolor);
+}
+
+h1 {
+	font-family: var(--rubriktext);
+	font-size: 45px;
+	font-weight: 700;
+	text-align: center;
+	color: var(--h1color);
+  margin: 25px;
+  font-style:normal;
+}
+
+h2 {
+	font-family: var(--rubriktext);
+  font-size: 30px;
+	font-weight: 700;
+	color: var(--h2color);
+  margin: 7px;
+  font-style:normal;
+}
+
+h3 {
+	font-family: var(--rubriktext);
+  font-size: 25px;
+	font-weight: 700;
+	color: var(--h3color);
+  margin: 5px;
+  font-style:normal;
+}
+
+address {
+	font-style:normal;
+}
+
+/* --- BUTTON--- */
+.full {
+  width: 100%;
+}
+
+.button {
+  border: none;
+  padding: 20px 20px;
+  margin: 20px 0px 20px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background-color: var(--blue);
+
+  /* Text */
+  font-family: var(--rubriktext);
+  font-size: 20px;
+	font-weight: 700;
+	color: var(--white);
+}
+
+.button:hover {
+	color: var(--white);
+  background-color: var(--hovercolor);
+}
+
+/* --- FORMULÄR --- */
+input {
+  padding: 17px 20px;
+  font-size: 20px;
+  display: inline-block;
+  border: 3px solid var(--blue);
+  border-radius: 0px;
+  box-sizing: border-box;
+}
+
+/* --- INFOMENY --- */
+ul.menu {
+  list-style-type: none;
+	margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+	overflow: hidden;
+}
+
+.menubox {
+  flex: 2;
+  display: flex;
+  align-items: center;
+}
+
+.menubox2 {
+  flex: 2;
+  display: flex;
+  align-items: center;
+}
+
+/* --- Webbshopsmeny --- */
+.menuitem, .dropdown {
+  float: left;
+}
+
+.menuitem a {
+  display: inline-block;
+  text-align: center;
+  font-family: var(--rubriktext);
+  font-size: 20px;
+	font-weight: 700;
+  padding: 20px;
+  text-decoration: none;
+  background-color: var(--lightblue);
+  margin:0;
+  width: 150px;
+}
+
+.dropdown a, .dropdown-button {
+  display: inline-block;
+  text-align: center;
+  font-family: var(--rubriktext);
+  font-size: 20px;
+	font-weight: 700;
+  padding: 20px;
+  text-decoration: none;
+  width: 150px;
+}
+
+.menuitem a:hover, .dropdown:hover .dropdown-button {
+  background-color: var(--hovercolor);
+}
+
+/* ---------------------------- */ 
+/* Hide icons for big screens */ 
+.menubox .hamburger {
+  display: none;
+}
+
+.menubox2 .shoppingbag {
+  display: none;
+}
+
+/* Hide the menus when the screen is small enough. 
+Show the menu icons in the upper left and right corners. */
+@media screen and (max-width: 1500px) {
+
+/* --- Info menu --- */ 
+  .menubox a {
+    display: none;
+    left: 0;
+    top: 0;
+  }
+  .menubox a.hamburger {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  /* --- Shop menu --- */ 
+  .menubox2 a {
+    display: none;
+    right: 0;
+    top: 0;
+  }
+  .menubox2 a.shoppingbag {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .dropdown-content {
+    margin-left: -190px;
+    margin-top: -70px;
+  }
+
+  /* Class for hiding some other things when the screen is small */
+  .smallHide {
+    display: none;
+  }
+}
+
+/* The "responsive" class is added to the menus when the user clicks the menu icon. 
+This class makes the menus vertical. */
+@media screen and (max-width: 1500px) {
+
+  /* --- Info menu --- */ 
+  .menubox.responsive {
+    position: absolute;
+    left:0;
+  }
+  .menubox.responsive a {
+    display: block;
+  }
+  .menubox.responsive a {
+    position:relative;
+  }
+  .menuitem {
+    clear: left;
+    left: 0;
+  }
+  
+  /* --- Shop menu --- */ 
+  .menubox2.responsive {
+    position: absolute;
+    top:0;
+    right:0;
+  }
+  .menubox2.responsive a {
+    display: block;
+  }
+  .menubox2.responsive a {
+    position: relative;
+  }
+  .dropdown {
+    clear: left;
+    left: 0;
+  }
+}
+
+/* ---------------------------- */ 
+
+.dropdown {
+  display: inline-block;
+  background-color: #ffffff;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 20px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: var(--lightblue);}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* --- Infoblock --- */
+.contentBox {
+  margin: auto;
+	padding: 10px 30px;
+	max-width: 1200px;
+  display: block;
+  overflow: auto;
+}
+
+/* --- GALLERY & IMAGES --- */
+.gallery {
+  flex:1;
+  margin:auto;
+  align-items: center;
+}
+
+.desc:hover {
+  background-color: var(--hovercolor);
+}
+
+.galleryimg {
+  display: block;
+  margin:auto;
+  max-width: 300px;
+  height: 300px;
+}
+
+/* --- Banner--- */
+.bannerimg {
+  width: 100%;
+  object-fit: cover;
+  padding:0;
+  float: center;
+}
+
+/* --- Container for banner--- */
+.bannercontainer {
+  display:flex;
+  justify-content: center;
+	margin: 0;
+  padding: 0;
+}
+
+/* --- Profile image --- */
+.profileimg {
+  max-width: 300px;
+  height: auto;
+  float: left;
+  margin: 20px;
+}
+
+.productimg {
+  max-width: 500px;
+  height: auto;
+  float: left;
+  margin: 20px;
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+  font-style:normal;
+}
+
+/* --- Icons --- */
+.iconStyle {
+  width: 30px;
+  height: auto;
+  float:left; 
+  margin: 10px;
+}
+
+.iconSearch {
+  width: 30px;
+  display: block;
+  margin: auto;
+}
+
+.iconTrolley {
+  width: 40px;
+  display: block;
+  margin: auto;
+}
+
+.iconCogwheel {
+  width: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.iconShoppingbag {
+  width: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+/* --- Logo --- */
+.logo {
+  max-width: 600px;
+  height: auto;
+}
+
+/* --- FLEX --- */
+/* --- Inline container--- */
+.container {
+  display:flex;
+  justify-content: center;
+	margin: auto;
+	padding: 20px 20px 40px 20px;
+	max-width: 1200px;
+}
+
+/* --- Inline container flips to vertical when zoomed--- */
+@media (max-width: 1000px) {
+  .container {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+/* --- Flex content left aligned--- */
+.flexContent {
+  flex:1;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+}
+
+/* --- Centered flex content --- */
+.flexContentCentered {
+  flex:1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+/* --- Container for header --- */
+.headercontainer {
+  display:flex;
+  justify-content: center;
+	margin: auto;
+	padding: 70px 50px 70px 50px;
+	max-width: 1200px;
+}
+
+/* --- Container for menus--- */
+.menucontainer {
+  display:flex;
+  justify-content: center;
+	margin: auto;
+	max-width: 1200px;
+}
+
+/* --- TABLE --- */
+#tabell {
+  max-width: 1000px;
+  border-collapse: collapse;
+}
+
+#tabell td, #tabell th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#tabell th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: var(--lightblue);
+  font-weight: bold;
+}
+
+/* --- VIDEO --- */
+video.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- FOOTER --- */
+
+/* --- Container for footer--- */
+.footercontainer {
+  display:flex;
+  justify-content: center;
+	margin: auto;
+	padding: 50px 0px 50px 0px;
+	max-width: 1000px;
+}
+
+.addressItems {
+  display: flex;
+  align-items: center;
+}
+
+.adresstext {
+  padding: 20px;
+}
+
+address {
+  flex:2;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+}
+
+.blue {
+  background-color: var(--lightblue);
+  padding: 0px;
+  margin: 0px;
+}
+
+/* --- DOM functions --- */
+#showmore {display: none;
+}
+
+#dots {display: none;
+}
+
+#price {display: none;}
+
+#display {
+  font-family: var(--rubriktext);
+  font-size: 30px;
+	font-weight: 700;
+	color: var(--h2color);
+  margin: 7px;
+  font-style:normal;
+}
+
+/* --- reCHAPTA --- */ 
+.form {
+  text-align:center;
+  display:inline-block;
+}
+
+
+/* For printing */ 
+
+@media print {
+  :root {
+    --blue: black;
+    --lightblue: white;
+    --white: white;
+    --textcolor: black;
+    --h1color: black;
+    --h2color: black;
+    --h3color: black;
+    --brödtext: "Times New Roman", Times, serif;
+    --rubriktext: "Times New Roman", Times, serif;
+  }
+  
+  body {
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  .header {
+    margin: auto;
+    max-width: 1000px;
+    display: block;
+    overflow: auto;
+  }
+  
+  #center {
+    text-align: center;
+  }
+  
+  /* --- TEXT --- */
+  
+  /* Brödtext och rubriker */
+  * {
+    font-family: var(--brödtext);
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--textcolor);
+    line-height: 1.5;
+  }
+  
+  .textcolor {
+    color: var(--textcolor);
+  }
+  
+  h1 {
+    font-family: var(--rubriktext);
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--h1color);
+    margin: 3px;
+    font-style:normal;
+  }
+  
+  h2 {
+    font-family: var(--rubriktext);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--h2color);
+    margin: 3px;
+    font-style:normal;
+  }
+  
+  h3 {
+    font-family: var(--rubriktext);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--h3color);
+    margin: 3px;
+    font-style:normal;
+  }
+  
+  address {
+    font-style:normal;
+  }
+  
+  /* --- BUTTON--- */
+  .full {
+    width: 100%;
+  }
+  
+  .button {
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color: var(--blue);
+  
+    /* Text */
+    font-size: 12px;
+    font-family: var(--rubriktext);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--white);
+  }
+  
+  .button:hover {
+    color: var(--white);
+    background-color: var(--hovercolor);
+  }
+  
+  /* --- FORMULÄR --- */
+  input {
+    padding: 12px 20px;
+    font-size: 20px;
+    display: inline-block;
+    border: 3px solid #ccc;
+    border-radius: 0px;
+    box-sizing: border-box;
+  }
+  
+  input:focus {
+    border-radius: 0px;
+    border: 3px solid #555;
+  }
+  
+  /* --- INFOMENY --- */
+  ul.menu {
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .settings {
+    flex:3;
+    color: var(--textcolor);
+    float: right;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menubox {
+    flex: 2;
+  }
+  
+  /* --- SHOPMENY --- */
+  .menuitem, .dropdown {
+    float: left;
+  }
+  
+  .menuitem a, .dropdown a, .dropdown-button {
+    display: inline-block;
+    text-align: center;
+    font-family: var(--rubriktext);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--textcolor);
+    
+    
+    padding: 15px 30px;
+    text-decoration: none;
+    margin:0;
+  }
+  
+  .menuitem a:hover, .dropdown:hover .dropdown-button {
+    background-color: orange;
+  }
+  
+  .dropdown {
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* --- Infoblock --- */
+  .contentBox {
+    margin: auto;
+    padding: 10px 30px;
+    max-width: 1000px;
+    display: block;
+    overflow: auto;
+  }
+  
+  /* --- GALLERY & IMAGES --- */
+  .gallery {
+    flex:1;
+    margin:auto;
+    align-items: center;
+  }
+  
+  .desc:hover {
+    background-color: var(--hovercolor);
+  }
+  
+  .galleryimg {
+    display: block;
+    margin:auto;
+    width: 100px;
+    height: 100px;
+  }
+  
+  /* --- Banner--- */
+  .bannerimg {
+    max-width: 100px;
+    padding:0;
+    float: center;
+  }
+  
+  /* --- Container for banner--- */
+  .bannercontainer {
+    display:flex;
+    justify-content: center;
+    margin: auto;
+  }
+  
+  /* --- profile image --- */
+  .profileimg {
+    width: 300px;
+    height: auto;
+    float: left;
+    margin: 20px;
+  }
+  
+  .productimg {
+    width: 500px;
+    height: auto;
+    float: left;
+    margin: 20px;
+  }
+  
+  .desc {
+    padding: 15px;
+    text-align: center;
+    font-style:normal;
+  }
+  
+  /* --- Icons --- */
+  .iconStyle {
+    width: 30px;
+    height: auto;
+    float:left; 
+    margin: 10px;
+  }
+  
+  .iconSearch {
+    width: 30px;
+    display: block;
+    margin: auto;
+  }
+  
+  .iconTrolley {
+    width: 40px;
+    display: block;
+    margin: auto;
+  }
+  
+  .iconCogwheel {
+    width: 20px;
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  
+  
+  /* --- Logo --- */
+  .logo {
+    max-width: 200px;
+    height: auto;
+  }
+  
+  /* --- FLEX --- */
+  /* --- Inline container--- */
+  .container {
+    display:flex;
+    justify-content: center;
+    margin: auto;
+    padding: 20px 20px 40px 20px;
+    max-width: 1200px;
+  }
+  
+  /* --- Inline container flips to vertical when zoomed--- */
+  @media (max-width: 1500px) {
+    .container {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+  }
+  
+  /* --- Flex content left aligned--- */
+  .flexContent {
+    flex:1;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+  }
+  
+  /* --- Centered flex content --- */
+  .flexContentCentered {
+    flex:1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+  }
+  
+  /* --- Container for header --- */
+  .headercontainer {
+    display:flex;
+    justify-content: center;
+    margin: auto;
+    padding: 70px 50px 70px 50px;
+    max-width: 1200px;
+  }
+  
+  /* --- Container for menus--- */
+  .menucontainer {
+    display:flex;
+    justify-content: center;
+    margin: auto;
+    padding: 0px;
+    max-width: 1200px;
+  }
+  
+  /* --- TABLE --- */
+  #tabell {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #tabell td, #tabell th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #tabell th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--lightblue);
+    font-weight: bold;
+  }
+  
+  /* --- FOOTER --- */
+  
+  /* --- Container for footer--- */
+  .footercontainer {
+    display:flex;
+    justify-content: center;
+    margin: auto;
+    padding: 50px 0px 50px 0px;
+    max-width: 1000px;
+  }
+  
+  .addressItems {
+    display: flex;
+    align-items: center;
+  }
+  
+  .adresstext {
+    padding: 20px;
+  }
+  
+  address {
+    flex:2;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+  }
+  
+  .blue {
+    background-color: var(--lightblue);
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  
+  /* --- Hide menus etc --- */
+  .displaystatus {
+    display: none;
+  }
+  
+  
+}
