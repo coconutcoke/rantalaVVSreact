@@ -4,7 +4,7 @@ const Form = () => {
     return (
     <div>
       <ReCAPTCHA className="form"
-        sitekey="6LeNeNQkAAAAALtOpCkWvlATPMoSHhsON3unfw7u"/>
+        sitekey="6Lf7dNUkAAAAABG64w8Atgd128p6hCLJl_kyCoZH"/>
     </div>
   );
 };
