@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 class Header extends React.Component {
   render() {
@@ -55,7 +55,6 @@ class Header extends React.Component {
               <img
                 className="iconSearch"
                 src={require("../pictures/search.png")}
-                alt="picture"
               />
               <h3 className="textcolor smallHide">Sök</h3>
             </NavLink>
@@ -65,7 +64,6 @@ class Header extends React.Component {
             <NavLink to="/">
               <img
                 src={require("../pictures/logga-transp.png")}
-                alt="picture"
                 className="logo"
               />
             </NavLink>
@@ -76,7 +74,6 @@ class Header extends React.Component {
               <img
                 className="iconTrolley"
                 src={require("../pictures/cart.jpg")}
-                alt="picture"
               />
               <h3 className="textcolor smallHide">Varukorg</h3>
             </NavLink>
