@@ -525,8 +525,8 @@ address {
 
 /* --- reCHAPTA --- */ 
 .form {
-  text-align:center;
-  display:inline-block;
+  margin: 0 auto;
+  width: 304px;
 }
 
 
