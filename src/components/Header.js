@@ -55,6 +55,7 @@ class Header extends React.Component {
               <img
                 className="iconSearch"
                 src={require("../pictures/search.png")}
+                alt="Search"
               />
               <h3 className="textcolor smallHide">Sök</h3>
             </NavLink>
@@ -64,6 +65,7 @@ class Header extends React.Component {
             <NavLink to="/">
               <img
                 src={require("../pictures/logga-transp.png")}
+                alt="Rantala VVS"
                 className="logo"
               />
             </NavLink>
@@ -74,6 +76,7 @@ class Header extends React.Component {
               <img
                 className="iconTrolley"
                 src={require("../pictures/cart.jpg")}
+                alt="Varukorg"
               />
               <h3 className="textcolor smallHide">Varukorg</h3>
             </NavLink>
